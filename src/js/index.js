@@ -30,7 +30,7 @@ const createUserCard = (pokemon) => {
 
 
 
-fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
+fetch("https://pokeapi.co/api/v2/pokemon/?limit=20dir")
     .then(response => response.json())
     .then((data) => {
         // Imprime os dados brutos recebidos da PokeAPI
