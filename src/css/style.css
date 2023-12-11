@@ -1,3 +1,10 @@
 .imgPokedex{ 
     width: 200px;
 }
+
+header{
+    width: 100vw;
+    height: 150px;
+
+    background: red;
+}
