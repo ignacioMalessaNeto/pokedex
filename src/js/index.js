@@ -4,6 +4,8 @@ const createUserCard = (pokemon) => {
     const card = document.createElement("div");
     card.classList.add("card");
   
+    card.style = 'background-image:url("./images/pokedex.png"); width: 250px; height:380px; background-size:100%; background-repeat: no-repeat';
+
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
   
@@ -25,12 +27,16 @@ const createUserCard = (pokemon) => {
 
    const appendPokemonCard = (card) => {
      const containerPokemons = document.getElementById("containerPokemons")
+     containerPokemons.style.display = "flex";
+     containerPokemons.style.gap = "20px";
+     containerPokemons.style.flexWrap = "wrap";
+     containerPokemons.style.margin = "10px 160px";
      containerPokemons.appendChild(card)
-    }
+  }
 
 
 
-fetch("https://pokeapi.co/api/v2/pokemon/?limit=20dir")
+fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
     .then(response => response.json())
     .then((data) => {
         // Imprime os dados brutos recebidos da PokeAPI

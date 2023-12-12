@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Pokedex</title>
 </head>
+
 <body>
     <header>
         <img src="./images/pokebola.png" alt="imagem pokebola">
 
-        <input type="text">
+        <div class="contains">
+            <label for="text">Name or number:</label>
+            <input type="text">
+        </div>
 
-        <select name="select">
-            <option value=""></option>
-            <option value="poison">Poison</option>
-            <option value="water">Water</option>
-            <option value="fire">Fire</option>
-            <option value="grass">Grass</option>
-            <option value="flying">Flying</option>
-            <option value="fighting">Fighting</option>
-        </select>
+        <div class="contains">
+            <label for="select">Type:</label>
+            <select name="select">
+                <option value=""></option>
+                <option value="poison">Poison</option>
+                <option value="water">Water</option>
+                <option value="fire">Fire</option>
+                <option value="grass">Grass</option>
+                <option value="flying">Flying</option>
+                <option value="fighting">Fighting</option>
+            </select>
+        </div>
+
     </header>
+    <main>
+        <div id="containerPokemons">
 
-        <!-- <img src="./images/pokedex.png" alt="imagem pokedex" class="imgPokedex"> -->
+        </div>
+    </main>
 
-    <script type="text/javascript" src="./js/index.js">
-    </script>
+    <script type="text/javascript" src="./js/index.js"></script>
 </body>
+
 </html>
