@@ -9,6 +9,10 @@ header{
 }
 
 body{
+    background-color: black;
+    font-family: cursive;
+    max-width: 1200px;
+    margin: 0 auto;
     justify-content: center;
 }
 
