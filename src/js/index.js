@@ -9,16 +9,21 @@ const createUserCard = (pokemon) => {
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
   
+    const imagePokemon = document.createElement("img");
+
+    imagePokemon.src = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/showdown/25.gif?raw=true`;
+
     const cardTitle = document.createElement("h5");
     cardTitle.classList.add("card-title");
     cardTitle.textContent = pokemon.name;
   
     const cardText = document.createElement("p");
     cardText.classList.add("card-text");
-    
+    cardText.style.position = "absolute";
   
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
+    cardBody.appendChild(imagePokemon);
   
     card.appendChild(cardBody);
   
@@ -27,16 +32,13 @@ const createUserCard = (pokemon) => {
 
    const appendPokemonCard = (card) => {
      const containerPokemons = document.getElementById("containerPokemons")
-     containerPokemons.style.display = "flex";
-     containerPokemons.style.gap = "20px";
-     containerPokemons.style.flexWrap = "wrap";
-     containerPokemons.style.margin = "10px 160px";
      containerPokemons.appendChild(card)
   }
 
 
 
-fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
+async function fethPokemons(){
+await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
     .then(response => response.json())
     .then((data) => {
         // Imprime os dados brutos recebidos da PokeAPI
@@ -48,10 +50,11 @@ fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
             const card = createUserCard(pokemon)
             appendPokemonCard(card)
 
-          //  console.log(pokemon.name);//
+            console.log(pokemon);
         });
     })
     .catch(error => console.error(error));
 
+}
 
-    
+fethPokemons();

@@ -8,36 +8,37 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Pokedex</title>
 </head>
+<header>
+    <img src="./images/pokebola.png" alt="imagem pokebola">
+
+    <div class="contains">
+        <label for="text">Name or number:</label>
+        <input type="text">
+    </div>
+
+    <div class="contains">
+        <label for="select">Type:</label>
+        <select name="select">
+            <option value=""></option>
+            <option value="poison">Poison</option>
+            <option value="water">Water</option>
+            <option value="fire">Fire</option>
+            <option value="grass">Grass</option>
+            <option value="flying">Flying</option>
+            <option value="fighting">Fighting</option>
+        </select>
+    </div>
+
+</header>
 
 <body>
-    <header>
-        <img src="./images/pokebola.png" alt="imagem pokebola">
-
-        <div class="contains">
-            <label for="text">Name or number:</label>
-            <input type="text">
-        </div>
-
-        <div class="contains">
-            <label for="select">Type:</label>
-            <select name="select">
-                <option value=""></option>
-                <option value="poison">Poison</option>
-                <option value="water">Water</option>
-                <option value="fire">Fire</option>
-                <option value="grass">Grass</option>
-                <option value="flying">Flying</option>
-                <option value="fighting">Fighting</option>
-            </select>
-        </div>
-
-    </header>
     <main>
         <div id="containerPokemons">
 
+
         </div>
     </main>
-
+    <img src="https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/showdown/25.gif?raw=true" alt="pokemon">
     <script type="text/javascript" src="./js/index.js"></script>
 </body>
 

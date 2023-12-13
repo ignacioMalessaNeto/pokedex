@@ -2,9 +2,36 @@ header{
     width: 100%;
     height: 150px;
     background: red;
-
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-image: "../images/pokedex.png";
+}
+
+body{
+    justify-content: center;
+}
+
+main{
+    justify-content: center;
+    display: flex;
+}
+
+
+#containerPokemons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1330px;
+}
+
+.card{
+    position: relative;
+}
+
+.card-title{
+    position: absolute;
+    left: 40%;
+    top: 55%;
 }
