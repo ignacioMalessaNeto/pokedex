@@ -4,25 +4,38 @@ const createUserCard = (pokemon) => {
     const card = document.createElement("div");
     card.classList.add("card");
   
-    card.style = 'background-image:url("./images/pokedex.png"); width: 250px; height:380px; background-size:100%; background-repeat: no-repeat';
+    const imagePokemon = document.createElement("img"); 
+
+    imagePokemon.src = "../../src/images/pokedex.png"
+
+    imagePokemon.classList.add("imagePokedex");
 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
   
-    const imagePokemon = document.createElement("img");
+    const gifPokemon = document.createElement("img");
 
-    imagePokemon.src = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/showdown/25.gif?raw=true`;
+    gifPokemon.src = `https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/other/showdown/25.gif?raw=true`;
 
-    const cardTitle = document.createElement("h5");
-    cardTitle.classList.add("card-title");
-    cardTitle.textContent = pokemon.name;
-  
-    const cardText = document.createElement("p");
-    cardText.classList.add("card-text");
-    cardText.style.position = "absolute";
+    gifPokemon.classList.add("gifPokemon");
+    
+    const cardTitle = document.createElement("h1");
+    
+    const pokemonName = document.createElement("span"); 
+
+    const pokemonNumber = document.createElement("span"); 
+    
+    pokemonName.classList.add("card-title");
+
+    cardTitle.append(pokemonName);
+    cardTitle.append(pokemonNumber);
+
+    pokemonName.textContent = pokemon.name;
+
+    pokemonNumber.textContent = pokemon.id;
   
     cardBody.appendChild(cardTitle);
-    cardBody.appendChild(cardText);
+    cardBody.appendChild(gifPokemon);
     cardBody.appendChild(imagePokemon);
   
     card.appendChild(cardBody);
@@ -48,6 +61,7 @@ await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20")
         data.results.forEach((pokemon) => {
            
             const card = createUserCard(pokemon)
+            
             appendPokemonCard(card)
 
             console.log(pokemon);

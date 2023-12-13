@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Oxanium', cursive;
+}
+
 header{
     width: 100%;
-    height: 150px;
+    height: 100px;
     background: red;
     display: flex;
     align-items: center;
@@ -9,33 +15,45 @@ header{
 }
 
 body{
-    background-color: black;
     font-family: cursive;
-    max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
 }
 
 main{
     justify-content: center;
-    display: flex;
 }
 
 
-#containerPokemons{
+#containerPokemons{   
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
-    max-width: 1330px;
+    background: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);;
+    min-height: 100vh;
 }
 
 .card{
     position: relative;
+    margin: 2% 15px;
+}
+
+.imagePokedex {
+    width: 100%;
+    max-width: 240px;
 }
 
 .card-title{
     position: absolute;
     left: 40%;
     top: 55%;
+    font-size: 80%;
+}
+
+.gifPokemon{
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    height: 15%;
 }
