@@ -4,6 +4,13 @@
     font-family: 'Oxanium', cursive;
 }
 
+
+body{
+    font-family: cursive;
+    margin: 0 auto;
+    justify-content: center;
+}
+
 header{
     width: 100%;
     height: 100px;
@@ -14,10 +21,14 @@ header{
     background-image: "../images/pokedex.png";
 }
 
-body{
-    font-family: cursive;
-    margin: 0 auto;
-    justify-content: center;
+header .inputSearch{
+    border-radius: 15px;
+    border: none;
+    padding: 5px;
+}
+
+header .selectType{
+
 }
 
 main{
@@ -40,14 +51,7 @@ main{
 
 .imagePokedex {
     width: 100%;
-    max-width: 240px;
-}
-
-.card-title{
-    position: absolute;
-    left: 40%;
-    top: 55%;
-    font-size: 80%;
+    max-width: 425px;
 }
 
 .gifPokemon{
@@ -56,4 +60,24 @@ main{
     left: 50%;
     transform: translate(-50%, 20%);
     height: 15%;
+}
+
+.cardTitle{
+    position: absolute;
+
+    bottom: 41%;
+    
+    right: 25%;
+
+    font-size: clamp(5%, 4vw, 25px);
+
+}
+
+.pokemonName{
+    text-transform: capitalize;
+    color: #aaa;
+}
+
+.pokemonNumber{
+    color: #3a444d;
 }

@@ -21,18 +21,20 @@ const createUserCard = (pokemon) => {
     
     const cardTitle = document.createElement("h1");
     
+    cardTitle.classList.add("cardTitle");
+
     const pokemonName = document.createElement("span"); 
 
     const pokemonNumber = document.createElement("span"); 
     
-    pokemonName.classList.add("card-title");
+    pokemonName.classList.add("pokemonName");
+    pokemonNumber.classList.add("pokemonNumber"); 
 
-    cardTitle.append(pokemonName);
-    cardTitle.append(pokemonNumber);
-
+    pokemonNumber.textContent = `0001 - `;
     pokemonName.textContent = pokemon.name;
 
-    pokemonNumber.textContent = pokemon.id;
+    cardTitle.append(pokemonNumber);
+    cardTitle.append(pokemonName);
   
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(gifPokemon);
