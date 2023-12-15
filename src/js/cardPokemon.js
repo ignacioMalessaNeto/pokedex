@@ -1,23 +1,21 @@
-const cardPokemon = (pokemon, id) => {    
+const cardPokemon = async (pokemon, id, pokemonOne) => {    
   
-    // const data
-
     const card = document.createElement("div");
 
     card.classList.add("card");
-  
+    
     const imagePokemon = document.createElement("img"); 
-
+    
     imagePokemon.src = "../../src/images/pokedex.png"
-
+    
     imagePokemon.classList.add("imagePokedex");
-
+    
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
-  
+    
     const gifPokemon = document.createElement("img");
+    gifPokemon.src = await pokemonOne['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
 
-    // gifPokemon.src = `${pokemon["sprites"].[]}`;
 
     gifPokemon.classList.add("gifPokemon");
     
