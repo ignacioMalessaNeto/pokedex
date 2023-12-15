@@ -12,11 +12,11 @@
 <body>
     <header>
         <img src="./images/pokebola.png" alt="imagem pokebola">
-    
+
         <div class="contains">
             <input type="search" class="inputSearch" placeholder="Name or id" required>
         </div>
-    
+
         <div class="contains2">
             <select name="select" class="selectType">
                 <option value="">Type Pokemon</option>
@@ -29,11 +29,19 @@
             </select>
         </div>
     </header>
-    <main id="containerPokemons"> 
-    </main>
+    <main>
+        <div id="containerPokemons">
 
-    <button id="buttonPrevius">Previos</button>
-    <button id="buttonNext">Next</button>
+        </div>
+        
+        <div class="buttonsPagination">
+            <button id="buttonPrevius">Previos</button>
+            <button id="buttonNext">Next</button>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
     <script type="module" src="./js/pagination.js"></script>
     <script type="module" src="./js/index.js"></script>
 </body>

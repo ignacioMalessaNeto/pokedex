@@ -1,4 +1,6 @@
 const cardPokemon = (pokemon, id) => {    
+  
+    // const data
 
     const card = document.createElement("div");
 
@@ -30,12 +32,19 @@ const cardPokemon = (pokemon, id) => {
     pokemonName.classList.add("pokemonName");
     pokemonNumber.classList.add("pokemonNumber"); 
 
+    const buttonInfo = document.createElement("button");
+
+    buttonInfo.classList.add("buttonInfo");
+
+    buttonInfo.textContent = "Details";
+
     pokemonNumber.textContent = `${id.toString().padStart(4, '0')} - `;
     pokemonName.textContent = pokemon.name;
 
     cardTitle.append(pokemonNumber);
     cardTitle.append(pokemonName);
   
+    cardBody.appendChild(buttonInfo);
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(gifPokemon);
     cardBody.appendChild(imagePokemon);

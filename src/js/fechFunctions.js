@@ -29,4 +29,10 @@ async function fethPokemon(pokemonUrl) {
   return data;
 }
 
-export { listPokemons, fethPokemon };
+async function searchPokemon(pokemon){
+  const apiResponseSearch = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+  const data = await apiResponseSearch.json();
+  return data;
+}
+
+export { listPokemons, fethPokemon, searchPokemon };
