@@ -14,14 +14,12 @@
         <img src="./images/pokebola.png" alt="imagem pokebola">
     
         <div class="contains">
-            <label for="text">Name or number:</label>
-            <input type="search" class="inputSearch">
+            <input type="search" class="inputSearch" placeholder="Name or id" required>
         </div>
     
-        <div class="contains">
-            <label for="select">Type:</label>
+        <div class="contains2">
             <select name="select" class="selectType">
-                <option value=""></option>
+                <option value="">Type Pokemon</option>
                 <option value="poison">Poison</option>
                 <option value="water">Water</option>
                 <option value="fire">Fire</option>
@@ -32,9 +30,12 @@
         </div>
     </header>
     <main id="containerPokemons"> 
-
     </main>
-    <script type="text/javascript" src="./js/index.js"></script>
+
+    <button id="buttonPrevius">Previos</button>
+    <button id="buttonNext">Next</button>
+    <script type="module" src="./js/pagination.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

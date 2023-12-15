@@ -17,18 +17,35 @@ header{
     background: red;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     background-image: "../images/pokedex.png";
+    gap: 15%;
+    justify-content: center;
 }
 
-header .inputSearch{
-    border-radius: 15px;
-    border: none;
-    padding: 5px;
+header .contains .inputSearch{
+    border-radius: 5px;
+    padding: 4%;
+    font-size: clamp(5%, 4vw, 18px);
+    outline: none;
+    border: 2px solid #333;
 }
 
-header .selectType{
+header .contains .inputSearch::placeholder{
+    color: black;
+}
 
+
+header .contains2 .selectType{
+    border-radius: 5px;
+    border: 2px solid #333;
+
+    padding: 4%;
+    font-size: clamp(5%, 4vw, 18px);
+    outline: none;
+}
+
+header .contains2 label {
+    font-size: clamp(5%, 4vw, 15px);
 }
 
 main{
@@ -80,4 +97,12 @@ main{
 
 .pokemonNumber{
     color: #3a444d;
+}
+
+@media(max-width: 690px){
+    header{
+        height: 200px;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
