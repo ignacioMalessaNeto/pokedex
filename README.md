@@ -1,5 +1,9 @@
 # pokedex
-Pokedex que ira ser criada com a pokeAPI junto de 2 colaboradores. 
+Pokedex que ira ser criada com a pokeAPI junto de 3 colaboradores. 
+IGNACIO
+FABIANO
+CARLA TABORD
+
 
 
 // Este código utiliza a PokeAPI para recuperar informações sobre pokémons,
