@@ -8,7 +8,7 @@ async function listPokemons(urlApi = "https://pokeapi.co/api/v2/pokemon") {
     const data = await fetch(urlApi);
     const json = await data.json();
     const pokemons = json.results;
-  
+  // logica de criação do card para funcionamentopor conta de não funcionar <than>;
     for (const pokemon of pokemons) {
       const { id, types } = await fethPokemon(pokemon.url);
   
