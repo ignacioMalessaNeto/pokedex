@@ -1,25 +1,20 @@
-# pokedex
-Pokedex que ira ser criada com a pokeAPI junto de 3 colaboradores. 
-IGNACIO
-FABIANO
-CARLA TABORD
-
-
-
-// Este código utiliza a PokeAPI para recuperar informações sobre pokémons,
-// permitindo a customização da quantidade de resultados através do parâmetro "?limit={valor}".
-// Além disso, é possível ajustar a posição inicial dos resultados com o parâmetro "?offset={valor}".
-// O código realiza uma requisição usando a função fetch, processa os dados recebidos e imprime
-// os nomes dos pokémons no console.
-
-// Exemplo de uso:
-// O código abaixo traz os primeiros 50 pokémons a partir do número 20.
-// fetch("https://pokeapi.co/api/v2/pokemon/?limit=50&offset=20")
-//     .then(response => response.json())
-//     .then((data) => {
-//         console.log(data);
-//         data.results.forEach((pokemon) => {
-//             console.log(pokemon.name);
-//         });
-//     })
-//     .catch(error => console.error(error));
+# pokedex:
+Pokedex que ira ser criada com a PokeAPI junto de 2 colaboradores. 
+# Titulo: 
+Desenvolvimento da Interface com PokeAPI
+# Objetivo:
+Este projeto foi desenvolver uma aplicação frontend que utiliza a PokeAPI para exibir informações sobre Pokémons.
+A aplicação foi desenvolvido utilizando HTML, CSS e JavaScript.
+# Pagina inicial: 
+Aprentação da lista de Pokémons exibindo a imagem, o nome e o numero específico.
+A página permite a navegação para a pagina de detalhes do Pókemon escolhido.
+# Pagina de Detalhes:
+As informações são apresentadas de forma detalhada sobre um Pokémom especifico por nome e número.
+A navegação permite sobre o Pokémom escolhido obter as informaões sobre as características como tipo e habilidades.
+A navegação possibilita retornar à listagem principal, pesquisar o próximo Pokémon ou voltar para o Pokémon anterior.
+# Pesquisa: 
+A pesquisa possibilita ao usuário obter o pokemón especifico por nome e número.
+# Responsividade, estilo e desing:
+O projeto utiliza o CSS para garantir um layout agradavel. A responsividade possibilita que seja utilizado em dispositivos de diferentes tamanhos proporcionando ao usuário uma experiencia satisfatória e atraente. 
+# Interação com PokeAPI
+O código realiza uma requisição usando a função fetch, processa os dados recebidos e imprime os nomes dos pokémons no console.
