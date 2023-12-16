@@ -1,23 +1,28 @@
 import { cardPokemon, appendPokemonCard } from "./cardPokemon.js";
 
-console.log();
-
 async function listPokemons(urlApi = "https://pokeapi.co/api/v2/pokemon") {
-  await fetch(urlApi)
-    .then((response) => response.json())
-    .then((data) => {
-
-      data.results.forEach(async (pokemon) => {
-        const { id } = await fethPokemon(pokemon.url);
-
-        const pokemonOne = await fethPokemon(pokemon.url);
-
-        const card = await cardPokemon(pokemon, id, pokemonOne);
-
-        appendPokemonCard(card);
-      });
-    })
-    .catch((error) => console.error(error));
+  const data = await fetch(urlApi);
+  const json = await data.json();
+  const pokemons = json.results;
+  try{
+    const data = await fetch(urlApi);
+    const json = await data.json();
+    const pokemons = json.results;
+  
+    for (const pokemon of pokemons) {
+      const { id, types } = await fethPokemon(pokemon.url);
+  
+      const pokemonOne = await fethPokemon(pokemon.url);
+  
+      console.log(pokemonOne);
+  
+      const card = await cardPokemon(pokemon, types, id, pokemonOne);
+  
+      await appendPokemonCard(card);
+    }}
+    catch{
+      (error) => console.error(error)
+    }
 }
 
 async function fethPokemon(pokemonUrl) {
@@ -28,8 +33,10 @@ async function fethPokemon(pokemonUrl) {
   return data;
 }
 
-async function searchPokemon(pokemon){
-  const apiResponseSearch = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+async function searchPokemon(pokemon) {
+  const apiResponseSearch = await fetch(
+    `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+  );
   const data = await apiResponseSearch.json();
   // console.log(data);
   return data;

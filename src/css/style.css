@@ -121,7 +121,7 @@ main{
     box-shadow: inset -4px 4px 0 #222;
 }
 
-.buttonInfo:hover {
+.buttonInfo:hover, .buttonsPagination #buttonNext:hover, .buttonsPagination #buttonPrevius:hover {
     background-color: #3a3a3a;
     cursor: pointer;
 }

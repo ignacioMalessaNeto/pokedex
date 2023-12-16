@@ -1,4 +1,4 @@
-const cardPokemon = async (pokemon, id, pokemonOne) => {    
+const cardPokemon = async (pokemon, types, id, pokemonOne) => {    
   
     const card = document.createElement("div");
 
@@ -14,8 +14,12 @@ const cardPokemon = async (pokemon, id, pokemonOne) => {
     cardBody.classList.add("card-body");
     
     const gifPokemon = document.createElement("img");
-    gifPokemon.src = await pokemonOne['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
 
+    types.map(({type}) => {
+      // console.log("Type: ", type);
+    })
+
+    gifPokemon.src = pokemonOne['sprites']['versions']['generation-v']['black-white']['animated']['front_default'] || pokemonOne['sprites']['other']['official-artwork'] ;
 
     gifPokemon.classList.add("gifPokemon");
     
@@ -28,6 +32,7 @@ const cardPokemon = async (pokemon, id, pokemonOne) => {
     const pokemonNumber = document.createElement("span"); 
     
     pokemonName.classList.add("pokemonName");
+
     pokemonNumber.classList.add("pokemonNumber"); 
 
     const buttonInfo = document.createElement("button");
@@ -42,9 +47,9 @@ const cardPokemon = async (pokemon, id, pokemonOne) => {
     cardTitle.append(pokemonNumber);
     cardTitle.append(pokemonName);
   
+    cardBody.appendChild(gifPokemon);
     cardBody.appendChild(buttonInfo);
     cardBody.appendChild(cardTitle);
-    cardBody.appendChild(gifPokemon);
     cardBody.appendChild(imagePokemon);
   
     card.appendChild(cardBody);
@@ -52,9 +57,9 @@ const cardPokemon = async (pokemon, id, pokemonOne) => {
     return card;
 };
 
-const appendPokemonCard = (card) => {
+const appendPokemonCard = async (card) => {
     const containerPokemons = document.getElementById("containerPokemons");
-    containerPokemons.appendChild(card);
+    await containerPokemons.appendChild(card);
   };
 
 export { cardPokemon, appendPokemonCard };

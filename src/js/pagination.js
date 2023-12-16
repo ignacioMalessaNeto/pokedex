@@ -17,6 +17,7 @@ previus.addEventListener("click", () => {
 });
 
 next.addEventListener("click", () => {
+  document.offSetTop
   container.textContent = "";
   count += 20;
   const urlApi = url + count;
