@@ -14,7 +14,7 @@ async function listPokemons(urlApi = "https://pokeapi.co/api/v2/pokemon") {
   
       const pokemonOne = await fethPokemon(pokemon.url);
   
-      console.log(pokemonOne);
+      // console.log(pokemonOne);
   
       const card = await cardPokemon(pokemon, types, id, pokemonOne);
   

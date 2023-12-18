@@ -48,9 +48,6 @@ header .contains2 .selectType{
     box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
 }
 
-header .contains2 label {
-    font-size: clamp(5%, 4vw, 15px);
-}
 
 main{
     justify-content: center;
@@ -102,6 +99,115 @@ main{
 .pokemonNumber{
     color: #3a444d;
 }
+
+.spanGrass{
+    background: #27c94f;
+    border-radius: 5px;
+}
+
+.spanBug{
+    background: #204424;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.spanDark{
+    background: #0e1211;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanDragon{
+    background: #72aeaa;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanEletric{
+    background: #e2e343;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanFairy{
+    background: #9c1944;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanFightinh{
+    background: #9c4322;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanFire{
+    background: #aa2424;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanFlying{
+    background: #4b687d;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGhost{
+    background: #36366b;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.spanGrass{
+    background: green;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
 
 .buttonInfo{
     position: absolute;

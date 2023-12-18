@@ -13,6 +13,7 @@ previus.addEventListener("click", () => {
     count -= 20;
     const urlApi = url + count;
     listPokemons(urlApi);
+    scrollToTop(); 
   }
 });
 
@@ -22,4 +23,13 @@ next.addEventListener("click", () => {
   count += 20;
   const urlApi = url + count;
   listPokemons(urlApi);
+  scrollToTop(); 
 });
+
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Faz a rolagem ser suave
+  });
+}
