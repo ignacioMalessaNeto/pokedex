@@ -14,16 +14,15 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
 
   const gifPokemon = document.createElement("img");
 
+  let divTypes = document.createElement("div");
+
+  divTypes.classList.add("divTypes");
+
   types.map(({ type }) => {
-    console.log(type.name);
-    // if(type.name == "grass"){
-    //   let spanGrass = document.createElement("span");
-    //   spanGrass.classList.add("spanGrass");
-    //   spanGrass.innerHTML = type.name;
-    //   cardBody.appendChild(spanGrass);
-    // }
-    console.log(type.name);
+    // console.log(type.name);
     let spanElement = document.createElement("span");
+
+    spanElement.classList.add("spanElement");
 
     switch (type.name) {
       case "bug":
@@ -31,6 +30,9 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
         break;
       case "dark":
         spanElement.classList.add("spanDark");
+        break;
+      case "dragon":
+        spanElement.classList.add("spanDragon");
         break;
       case "electric":
         spanElement.classList.add("spanElectric");
@@ -80,14 +82,15 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
       default:
         break;
     }
+
     spanElement.innerHTML = type.name;
-    cardBody.appendChild(spanElement);
+    divTypes.appendChild(spanElement);
   });
 
   gifPokemon.src =
     pokemonOne["sprites"]["versions"]["generation-v"]["black-white"][
       "animated"
-    ]["front_default"] || pokemonOne["sprites"]["back_default"];
+    ]["front_default"] || pokemonOne["sprites"]["front_default"];
 
   gifPokemon.classList.add("gifPokemon");
 
@@ -115,6 +118,7 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
   cardTitle.append(pokemonNumber);
   cardTitle.append(pokemonName);
 
+  cardBody.appendChild(divTypes);
   cardBody.appendChild(gifPokemon);
   cardBody.appendChild(buttonInfo);
   cardBody.appendChild(cardTitle);
