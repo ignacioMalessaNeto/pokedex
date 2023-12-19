@@ -39,7 +39,6 @@ async function fethPokemonType(pokemonUrl) {
   const data = await APIresponse.json();
   const pokemons = data.pokemon;
 
-  console.log(pokemons);
 }
 
 fethPokemonType();
