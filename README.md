@@ -3,7 +3,7 @@ Desenvolver um Pokedex que será criada com a Poke API junto de 2 colaboradores.
 ## Status:
 > :construction: Projeto em construção :construction:
 ## Titulo: 
-Desenvolvimento da Interface com Poke API
+Desenvolvimento da Interface com Poke API.
 ## Objetivo:
 Este projeto foi desenvolver uma aplicação frontend que utiliza a Poke API para exibir informações sobre Pokémons.
 A aplicação foi desenvolvido utilizando HTML, CSS e JavaScript.
