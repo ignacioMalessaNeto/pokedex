@@ -14,16 +14,20 @@
         
         <img src="./images/pokebola.png" alt="imagem pokebola">
 
-        <div class="contains">
-            <input type="search" class="inputSearch" placeholder="Name or id" required>
+        <div class="contains1">
+            <select name="select" class="selecTypeSearch" id="">
+                <option value="">Search for:</option>
+                <option value="type">Type</option>
+                <option value="idName">Id or name</option>
+            </select>
         </div>
 
         <div class="contains2">
-            <select name="select" class="selectType">
+            <select name="select" class="selectType" id="pokemonTypeSelect">
                 <option value="">Type Pokemon</option>
                 <option value="bug">Bug</option>
                 <option value="dark">Dark</option>
-                <option value="eletric">Eletric</option>
+                <option value="electric">Electric</option>
                 <option value="fairy">Fairy</option>
                 <option value="fire">Fire</option>
                 <option value="fighting">Fighting</option>
@@ -39,7 +43,10 @@
                 <option value="normal">Normal</option>
                 <option value="water">Water</option>
             </select>
+        </div>
 
+        <div class="contains">
+            <input type="search" class="inputSearch" placeholder="Name or id" required>
         </div>
     </header>
     <main>

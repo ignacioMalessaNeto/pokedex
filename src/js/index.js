@@ -2,7 +2,7 @@
 
 // import  cardPokemon  from "./cardPokemon";
  
-import { listPokemons, fethPokemon } from "./fechFunctions.js";
+import { listPokemons } from "./fechFunctions.js";
 listPokemons();
 
 

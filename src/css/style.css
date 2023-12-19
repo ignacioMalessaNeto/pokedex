@@ -18,7 +18,7 @@ header{
     display: flex;
     align-items: center;
     background-image: "../images/pokedex.png";
-    gap: 15%;
+    gap: 5%;
     justify-content: center;
 }
 
@@ -37,7 +37,7 @@ header .contains .inputSearch::placeholder{
 }
 
 
-header .contains2 .selectType{
+header .contains2 .selectType, .selecTypeSearch{
     border-radius: 5px;
     border: 2px solid #333;
 
@@ -119,6 +119,7 @@ main{
 
 .spanDark{
     background: #060a07;
+    color: white;
 }
 
 
@@ -265,7 +266,7 @@ main{
 
 @media(max-width: 690px){
     header{
-        height: 200px;
+        height: 275px;
         flex-direction: column;
         gap: 20px;
     }
