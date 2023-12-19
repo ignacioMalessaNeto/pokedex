@@ -33,7 +33,7 @@ async function fethPokemon(pokemonUrl) {
   return data;
 }
 
-async function fethPokemonType(pokemonUrl) {
+async function searchPokemonType(pokemonUrl) {
   const APIresponse = await fetch("https://pokeapi.co/api/v2/type/fire/");
 
   const data = await APIresponse.json();
@@ -42,14 +42,13 @@ async function fethPokemonType(pokemonUrl) {
   console.log(pokemons);
 }
 
-fethPokemonType();
+searchPokemonType();
 
 async function searchPokemon(pokemon) {
   const apiResponseSearch = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${pokemon}`
   );
   const data = await apiResponseSearch.json();
-  // console.log(data);
   return data;
 }
 
