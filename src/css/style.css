@@ -62,12 +62,12 @@ main{
 
 .contains{
     align-items: center;
-    display: flex;
+    display: none;
 }
 
 label{
     font-size: clamp(5%, 4vw, 18px);
-    width: 5vw;
+    min-width: 30%;
     color: white;
 }
 
@@ -104,7 +104,7 @@ label{
     
     right: 25%;
 
-    font-size: clamp(5%, 4vw, 25px);
+    font-size: clamp(1%, 4vw, 20px);
 
     max-width: 425px;
 }

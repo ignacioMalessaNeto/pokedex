@@ -73,12 +73,10 @@ async function listPokemons(urlApi = "https://pokeapi.co/api/v2/pokemon") {
     const data = await fetch(urlApi);
     const json = await data.json();
     const pokemons = json.results;
-    // const pokemons = json.results.slice(0, 20); // Mostrar apenas os primeiros 20 Pokémon
 
     // Iterando sobre a lista de Pokémon
     for (const pokemon of pokemons) {
       const { id, types, ...pokemonData } = await fethPokemon(pokemon.url);
-      // const pokemonData = await fethPokemon(pokemon.url);
 
       // Criando o card para o Pokémon
       const card = await cardPokemon(pokemon, types, id, pokemonData);
@@ -98,31 +96,48 @@ const elementInputSearch = document.querySelector(".contains");
 async function searchPokemon() {
   const selectedOption = selectSearchType.value;
 
-  console.log(selectElement);
+  try{
+  if (selectedOption === "idName") {
+    clearPokemonCards();
 
-  // Limpando os cards no DOM
-  try {
-    if (selectedOption === "idName") {
-      elementSelectTypes.style.display = "none";
-      elementInputSearch.style.display = "flex";
+    elementSelectTypes.style.display = "none";
+    elementInputSearch.style.display = "flex";
 
-      const pokemon = inputSearch.value.toLowerCase();
+    const searchTerm = inputSearch.value.trim().toLowerCase();
 
-      if (pokemon == "") {
-        listPokemons();
-      }
-
-      const data = await fetchPokemon(
-        `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+    if (searchTerm === "") {
+      listPokemons();
+    } else {
+      const data = await fetch(
+        `https://pokeapi.co/api/v2/pokemon?limit=1000`
       );
-      const { id, types } = data;
+      const jsonData = await data.json();
+      const matchingPokemons = jsonData.results.filter((pokemon) =>
+        pokemon.name.includes(searchTerm)
+      );
 
-      // Criando o card para o Pokémon
-      const card = await cardPokemon(data, types, id, data);
+      clearPokemonCards();
 
-      // Adicionando o card ao DOM
-      await appendPokemonCard(card);
-    } else if (selectedOption === "type") {
+      // Iterando sobre os Pokémon correspondentes
+      for (const matchingPokemon of matchingPokemons) {
+        const { id, types, ...pokemonData } = await fethPokemon(
+          matchingPokemon.url
+        );
+
+        // Criando o card para o Pokémon
+        const card = await cardPokemon(
+          matchingPokemon,
+          types,
+          id,
+          pokemonData
+        );
+
+        // Adicionando o card ao DOM
+        await appendPokemonCard(card);
+      }
+    }
+  } 
+    else if (selectedOption === "type") {
       elementSelectTypes.style.display = "flex";
       elementInputSearch.style.display = "none";
       searchPokemonType();
@@ -130,7 +145,7 @@ async function searchPokemon() {
       listPokemons();
 
       elementSelectTypes.style.display = "none";
-      elementInputSearch.style.display = "flex";
+      elementInputSearch.style.display = "none";
     } else {
       console.log("Selecione uma opção de busca válida.");
     }
@@ -139,9 +154,21 @@ async function searchPokemon() {
   }
 }
 
+let debounceTimer;
+
+async function debounceSearchPokemon() {
+  // Limpar o timer anterior, se existir
+  clearTimeout(debounceTimer);
+
+  // Configurar um novo timer
+  debounceTimer = setTimeout(() => {
+    searchPokemon();
+  }, 500); // Tempo de atraso em milissegundos (ajuste conforme necessário)
+}
+
 inputSearch.addEventListener("input", () => {
   clearPokemonCards();
-  searchPokemon();
+  debounceSearchPokemon();
 });
 
 selectSearchType.addEventListener("change", () => {

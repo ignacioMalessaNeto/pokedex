@@ -1,29 +1,32 @@
 const cardPokemon = async (pokemon, types, id, pokemonOne) => {
   const card = document.createElement("div");
-
   card.classList.add("card");
 
   const imagePokemon = document.createElement("img");
-
   imagePokemon.src = "../../src/images/pokedex.png";
-
   imagePokemon.classList.add("imagePokedex");
 
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
 
   const gifPokemon = document.createElement("img");
+  gifPokemon.classList.add("gifPokemon");
 
-  let divTypes = document.createElement("div");
+  // Verifica se a imagem principal está disponível
+  const mainImage =
+    pokemonOne["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"] || pokemonOne["sprites"]["front_default"];
 
+  gifPokemon.src = mainImage || "../../src/images/pokebola.png";
+
+  const divTypes = document.createElement("div");
   divTypes.classList.add("divTypes");
 
+  types = types || [];
   types.map(({ type }) => {
-    // console.log(type.name);
     let spanElement = document.createElement("span");
-
     spanElement.classList.add("spanElement");
 
+    
     switch (type.name) {
       case "bug":
         spanElement.classList.add("spanBug");
@@ -87,32 +90,19 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
     divTypes.appendChild(spanElement);
   });
 
-  gifPokemon.src =
-    pokemonOne["sprites"]["versions"]["generation-v"]["black-white"][
-      "animated"
-    ]["front_default"] || pokemonOne["sprites"]["front_default"];
-
-  gifPokemon.classList.add("gifPokemon");
-
   const cardTitle = document.createElement("h1");
-
   cardTitle.classList.add("cardTitle");
 
   const pokemonName = document.createElement("span");
-
   const pokemonNumber = document.createElement("span");
-
   pokemonName.classList.add("pokemonName");
-
   pokemonNumber.classList.add("pokemonNumber");
 
   const buttonInfo = document.createElement("button");
-
   buttonInfo.classList.add("buttonInfo");
-
   buttonInfo.textContent = "Details";
 
-  pokemonNumber.textContent = `${id.toString().padStart(4, "0")} - `;
+  pokemonNumber.textContent = `${id.toString().padStart(4, "0")}- `;
   pokemonName.textContent = pokemon.name;
 
   cardTitle.append(pokemonNumber);
