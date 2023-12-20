@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <title>Pokedex</title>
 </head>
 
 <body>
     <header>
         
-        <img src="./images/pokebola.png" alt="imagem pokebola">
+        <img src="./src/images/pokebola.png" alt="imagem pokebola">
 
         <div class="contains1">
-            <select name="select" class="selecTypeSearch" id="">
+            <select name="select" class="selecTypeSearch" id="selectSearchType">
                 <option value="">Search for:</option>
                 <option value="type">Type</option>
                 <option value="idName">Id or name</option>
@@ -23,6 +23,7 @@
         </div>
 
         <div class="contains2">
+            <label for="select">Select:</label>
             <select name="select" class="selectType" id="pokemonTypeSelect">
                 <option value="">Type Pokemon</option>
                 <option value="bug">Bug</option>
@@ -46,6 +47,7 @@
         </div>
 
         <div class="contains">
+            <label for="search">Type it:</label>
             <input type="search" class="inputSearch" placeholder="Name or id" required>
         </div>
     </header>
@@ -61,8 +63,8 @@
     <footer>
         
     </footer>
-    <script type="module" src="./js/pagination.js"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src=" ./src/js/pagination.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
 </body>
 
 </html>

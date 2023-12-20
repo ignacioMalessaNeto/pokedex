@@ -54,6 +54,22 @@ main{
     background: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);;
 }
 
+.contains2{
+    display: none;
+    align-items: center;
+    gap: 5%;
+}
+
+.contains{
+    align-items: center;
+    display: flex;
+}
+
+label{
+    font-size: clamp(5%, 4vw, 18px);
+    width: 5vw;
+    color: white;
+}
 
 #containerPokemons{   
     display: flex;
@@ -65,6 +81,7 @@ main{
 .card{
     position: relative;
     margin: 2% 15px;
+    max-height: 650px;
 }
 
 .imagePokedex {
