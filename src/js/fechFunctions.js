@@ -104,17 +104,39 @@ async function searchPokemon() {
     elementInputSearch.style.display = "flex";
 
     const searchTerm = inputSearch.value.trim().toLowerCase();
-
+    let matchingPokemons;
     if (searchTerm === "") {
       listPokemons();
-    } else {
+    } else if(typeof parseInt(searchTerm) == "number"){
+      const data = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${searchTerm}`
+      );
+      const jsonData = await data.json();
+      
+      const { id, types, ...pokemonData } = jsonData;
+
+      const card = await cardPokemon(
+        jsonData,
+        types,
+        id,
+        pokemonData
+      );
+
+      // Adicionando o card ao DOM
+      await appendPokemonCard(card);
+
+
+      // const matchingPokemons = jsonData
+    }
+    else {
       const data = await fetch(
         `https://pokeapi.co/api/v2/pokemon?limit=1000`
       );
       const jsonData = await data.json();
-      const matchingPokemons = jsonData.results.filter((pokemon) =>
+      matchingPokemons = jsonData.results.filter((pokemon) =>
         pokemon.name.includes(searchTerm)
       );
+      
 
       clearPokemonCards();
 

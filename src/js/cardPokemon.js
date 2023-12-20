@@ -14,7 +14,9 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
 
   // Verifica se a imagem principal está disponível
   const mainImage =
-    pokemonOne["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"] || pokemonOne["sprites"]["front_default"];
+    pokemonOne["sprites"]["versions"]["generation-v"]["black-white"][
+      "animated"
+    ]["front_default"] || pokemonOne["sprites"]["front_default"];
 
   gifPokemon.src = mainImage || "../../src/images/pokebola.png";
 
@@ -26,7 +28,6 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
     let spanElement = document.createElement("span");
     spanElement.classList.add("spanElement");
 
-    
     switch (type.name) {
       case "bug":
         spanElement.classList.add("spanBug");
