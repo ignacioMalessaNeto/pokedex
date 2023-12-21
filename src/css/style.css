@@ -54,6 +54,21 @@ main{
     background: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.back{
+    position: absolute;
+    justify-self: start;
+    left: 10vw;
+    font-size: clamp(10%, 6vw, 25px);
+}
+
 .contains2{
     display: none;
     align-items: center;
