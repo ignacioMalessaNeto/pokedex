@@ -12,7 +12,7 @@ Desenvolver um Pokedex que será criada com a Poke API junto de 2 colaboradores.
 <h2> 🛠 Tecnologias:</h2>
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?style=flat&logo=javascript)
 ![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
-![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
+![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6) 
 
 <h2> Pagina inicial:</h2>
 <p>Aprentação da lista de Pokémons exibindo a imagem, o nome e o numero específico.</p>
