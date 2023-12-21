@@ -99,7 +99,8 @@ const cardPokemon = async (pokemon, types, id, pokemonOne) => {
   pokemonName.classList.add("pokemonName");
   pokemonNumber.classList.add("pokemonNumber");
 
-  const buttonInfo = document.createElement("button");
+  const buttonInfo = document.createElement("a");
+  buttonInfo.href = `src/pages/details.html?pokemonId=${id}`
   buttonInfo.classList.add("buttonInfo");
   buttonInfo.textContent = "Details";
 
