@@ -126,4 +126,10 @@ const appendPokemonCard = async (card) => {
   await containerPokemons.appendChild(card);
 };
 
-export { cardPokemon, appendPokemonCard };
+// Função para limpar os cards no DOM
+function clearPokemonCards() {
+  const containerPokemons = document.getElementById("containerPokemons");
+  containerPokemons.innerHTML = "";
+}
+
+export { cardPokemon, appendPokemonCard, clearPokemonCards };

@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
-*{
+* {
     font-family: 'Oxanium', cursive;
 }
 
 
-body{
+body {
     font-family: cursive;
     margin: 0 auto;
     justify-content: center;
 }
 
-header{
+header {
     width: 100%;
     height: 100px;
     background: red;
@@ -22,7 +22,7 @@ header{
     justify-content: center;
 }
 
-header .contains .inputSearch{
+header .contains .inputSearch {
     border-radius: 5px;
     padding: 4%;
     font-size: clamp(5%, 4vw, 18px);
@@ -32,12 +32,13 @@ header .contains .inputSearch{
     box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
 }
 
-header .contains .inputSearch::placeholder{
+header .contains .inputSearch::placeholder {
     color: black;
 }
 
 
-header .contains2 .selectType, .selecTypeSearch{
+header .contains2 .selectType,
+.selecTypeSearch {
     border-radius: 5px;
     border: 2px solid #333;
 
@@ -49,12 +50,13 @@ header .contains2 .selectType, .selecTypeSearch{
 }
 
 
-main{
+main {
     justify-content: center;
-    background: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);;
+    background: linear-gradient(180deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);
+    ;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
     display: flex;
@@ -62,38 +64,38 @@ a{
     gap: 1vw;
 }
 
-.back{
+.back {
     position: absolute;
     justify-self: start;
     left: 10vw;
     font-size: clamp(10%, 6vw, 25px);
 }
 
-.contains2{
+.contains2 {
     display: none;
     align-items: center;
     gap: 5%;
 }
 
-.contains{
+.contains {
     align-items: center;
     display: none;
 }
 
-label{
+label {
     font-size: clamp(5%, 4vw, 18px);
     min-width: 30%;
     color: white;
 }
 
-#containerPokemons{   
+#containerPokemons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     min-height: 100vh;
 }
 
-.card{
+.card {
     position: relative;
     margin: 2% 15px;
     max-height: 650px;
@@ -104,7 +106,7 @@ label{
     max-width: 425px;
 }
 
-.gifPokemon{
+.gifPokemon {
     position: absolute;
     bottom: 55%;
     left: 45%;
@@ -112,123 +114,123 @@ label{
     height: 15%;
 }
 
-.cardTitle{
+.cardTitle {
     position: absolute;
 
     bottom: 41%;
-    
+
     right: 25%;
 
     font-size: clamp(1%, 4vw, 20px);
 
     max-width: 425px;
 }
- 
-.pokemonName{
+
+.pokemonName {
     text-transform: capitalize;
     color: #aaa;
 }
 
-.pokemonNumber{
+.pokemonNumber {
     color: #3a444d;
 }
 
-.spanElement{
+.spanElement {
     padding: 15%;
     border-radius: 5px;
     text-transform: capitalize;
 }
 
-.spanGrass{
+.spanGrass {
     background: #5aaf7a;
 }
 
 
-.spanBug{
+.spanBug {
     background: #559a64;
 
 }
 
-.spanDark{
+.spanDark {
     background: #060a07;
     color: white;
 }
 
 
-.spanDragon{
+.spanDragon {
     background: #4d968e;
 }
 
 
-.spanElectric{
+.spanElectric {
     background: #c3c96a;
 }
 
 
-.spanFairy{
+.spanFairy {
     background: #eb8de3;
 }
 
 
-.spanFighting{
+.spanFighting {
     background: #a95054;
 }
 
 
-.spanFire{
+.spanFire {
     background: #ff1a0a;
 }
 
 
-.spanFlying{
+.spanFlying {
     background: #4b687d;
 }
 
 
-.spanGhost{
+.spanGhost {
     background: #80698f;
 }
 
 
-.spanNormal{
+.spanNormal {
     background: #939ca5;
 }
 
 
-.spanPsychic{
+.spanPsychic {
     background: #ad648c;
 }
 
 
-.spanGround{
+.spanGround {
     background: #a18052;
 }
 
 
-.spanSteel{
+.spanSteel {
     background: #7da596;
 }
 
 
-.spanIce{
+.spanIce {
     background: #9acde0;
 }
 
 
-.spanPoison{
+.spanPoison {
     background: green;
 }
 
 
-.spanWater{
+.spanWater {
     background: #2057cf;
 }
 
-.spanRock{
+.spanRock {
     background: #6e6767;
 }
 
-.divTypes{
+.divTypes {
     font-size: clamp(5px, 5vw, 1rem);
     position: absolute;
     display: flex;
@@ -239,8 +241,8 @@ label{
 }
 
 
-.buttonInfo{
-    position:absolute;
+.buttonInfo {
+    position: absolute;
     padding: 3%;
     bottom: 10%;
     right: 18%;
@@ -257,12 +259,14 @@ label{
     box-shadow: inset -4px 4px 0 #222;
 }
 
-.buttonInfo:hover, .buttonsPagination #buttonNext:hover, .buttonsPagination #buttonPrevius:hover {
+.buttonInfo:hover,
+.buttonsPagination #buttonNext:hover,
+.buttonsPagination #buttonPrevius:hover {
     background-color: #3a3a3a;
     cursor: pointer;
 }
 
-.buttonsPagination{
+.buttonsPagination {
     display: flex;
     justify-content: center;
     gap: 2%;
@@ -270,15 +274,7 @@ label{
     width: 100%;
 }
 
-.buttonsPagination #buttonPrevius{
-    padding: 1% 3%;
-    background: #333;
-    border: 1px solid #000;
-    font-size: clamp(5px, 5vw, 1rem);
-    color: white;
-    border-radius: 15px;
-}
-.buttonsPagination #buttonPrevius{
+.buttonsPagination #buttonPrevius {
     padding: 1% 3%;
     background: #333;
     border: 1px solid #000;
@@ -287,7 +283,7 @@ label{
     border-radius: 15px;
 }
 
-.buttonsPagination #buttonNext{
+.buttonsPagination #buttonPrevius {
     padding: 1% 3%;
     background: #333;
     border: 1px solid #000;
@@ -296,10 +292,119 @@ label{
     border-radius: 15px;
 }
 
-@media(max-width: 690px){
-    header{
+.buttonsPagination #buttonNext {
+    padding: 1% 3%;
+    background: #333;
+    border: 1px solid #000;
+    font-size: clamp(5px, 5vw, 1rem);
+    color: white;
+    border-radius: 15px;
+}
+
+.pError {
+    font-size: clamp(1%, 4vw, 35px);
+    position: absolute;
+    bottom: 50%;
+    left: 30%;
+}
+
+.bodyDetails {
+    width: 100%;
+    height: 100vh;
+}
+
+
+.headerDetails {
+    width: 100%;
+    height: 100px;
+    background: red;
+    display: flex;
+    align-items: center;
+    background-image: "../images/pokedex.png";
+    gap: 5%;
+    justify-content: center;
+}
+
+.mainDetails {
+    max-width: 19;
+    width: 100%;
+    height: 89.3%;
+    background-repeat: no-repeat;
+}
+
+.containsAbility {
+    width: 50%;
+    height: 60%;
+    border-radius: 25px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: absolute;
+    right: 20%;
+    left: 20%;
+    top: 15%;
+}
+
+.h1Details {
+    font-size: clamp(1%, 4vw, 35px);
+    margin-bottom: 3%;
+}
+
+.ulMoves {
+    height: 200px;
+    overflow: hidden;
+    overflow: scroll;
+    bottom: 10%;
+    scrollbar-width: none;
+    /* Oculta a barra de rolagem */
+}
+
+.ulMoves::-webkit-scrollbar {
+    display: none;
+    /* Oculta a barra de rolagem */
+}
+
+li {
+    margin-bottom: 3%;
+}
+
+li {
+    font-size: clamp(5%, 4vw, 18px);
+
+}
+
+.imagePokemon {
+    position: absolute;
+    bottom: 30%;
+    left: 60%;
+    transform: translate(-50%, 20%);
+    height: 50%;
+    width: 40%;
+}
+
+@media(max-width: 690px) {
+    header {
         height: 275px;
         flex-direction: column;
         gap: 20px;
     }
+
+    .imagePokemon {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        height: 50%;
+        width: 40%;
+    }
+
+
+    .containsAbility {
+        top: 25%;
+    }
+
 }
